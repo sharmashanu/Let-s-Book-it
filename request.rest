@@ -1,0 +1,39 @@
+http://localhost:3000/bus
+
+###
+POST http://localhost:3000/bus/add-bus HTTP/1.1
+content-type: application/json
+
+{
+    "busName":"salil",
+    "busNumber":"MP-12-2234",
+    "source":"Warangal",
+    "destination":"delhi"
+}
+###
+POST http://localhost:3000/bus/search HTTP/1.1
+content-type: application/json
+
+{
+    "source":"noida",
+    "destination":"delhi",
+    "seatRequired":4,
+    "travelDate":"2020-08-17"
+}
+
+###
+POST http://localhost:3000/bus/reserve HTTP/1.1
+content-type: application/json
+
+{
+    "seatRequired":6,
+    "travelDate":"2020-08-17",
+    "userId": 2,
+    "busId": 1,
+    "seatId": 1
+}
+
+###
+
+
+GET http://localhost:3000/bus/view-reserve/2
